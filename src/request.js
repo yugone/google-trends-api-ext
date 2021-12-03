@@ -29,6 +29,7 @@ export default function request({method, host, path, qs, agent}) {
   const options = {
     host,
     method,
+    timeout:15000,
     path: `${path}?${querystring.stringify(qs)}`,
   };
 
